@@ -1,0 +1,33 @@
+    """注册并检查是否需要辅助验证
+    default: "A123456712345678"
+    ---
+    tags:
+      - getUUID
+    parameters:
+      - name: body
+        in: body
+        type: string
+        required: true
+        schema:
+          required:
+            - WxData
+          properties:
+            WxData:
+              type: string
+              description: A16/62数据
+            WechatVersion:
+              type: number
+              description: 微信版本
+            DeviceVersion:
+              type: string
+              default: android-25
+              description: 手机设备版本
+            XmlData:
+              type: string
+              description: 设备xml数据
+    security:
+      - APIKeyHeader: ['token']
+    responses:
+      200:
+        description: "{'cnt':剩余调用次数, 'data':uuid, 'message':返回信息, 'success':是否成功}"
+    """
