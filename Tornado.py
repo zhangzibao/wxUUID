@@ -4,7 +4,10 @@ from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from my_app.dns_app import app
 from loguru import logger
-
+"""
+微信UUID 微信协议
+最新滑块uuid算法
+"""
 if __name__ == '__main__':
     logger.info("启动flask进程")
     http_server = HTTPServer(WSGIContainer(app))
