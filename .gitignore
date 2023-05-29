@@ -12,3 +12,4 @@ my_tools/tokens
 my_tools/Utils.py
 my_app/dns_app.py
 my_app/WXAPI.py
+__pycache__/
